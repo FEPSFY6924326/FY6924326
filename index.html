@@ -239,14 +239,6 @@ async function getLastUpdatedTime() {
             'Error fetching update time.';
     }
 }
-
-async function verifyLastUpdatedTime() {
-    document.getElementById('last-updated').innerText = 'Verifying...';
-    await getLastUpdatedTime();
-    alert("Last modified time verified using GitHub API.");
-}
-
-window.onload = getLastUpdatedTime;
 </script>
 
 <!-- WORD COUNT SCRIPT -->
@@ -268,7 +260,18 @@ function displayTotalWordCount() {
         `Total word count: ${total}`;
 }
 
-window.onload = displayTotalWordCount;
+// ✅ Run BOTH timestamp and word count when the page loads
+window.addEventListener('load', function () {
+    getLastUpdatedTime();
+    displayTotalWordCount();
+});
+
+// ✅ Button still works, just calls the same timestamp function again
+async function verifyLastUpdatedTime() {
+    document.getElementById('last-updated').innerText = 'Verifying...';
+    await getLastUpdatedTime();
+    alert("Last modified time verified using GitHub API.");
+}
 </script>
 
 <footer>12 | Page</footer>
