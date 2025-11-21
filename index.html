@@ -78,51 +78,94 @@ footer {
 
 <h3 id="Abstract">Abstract</h3>
 <p class="ex1">
-<pre>
-This paper presents a novel adaptive active learning strategy. The most accurate classification model from a 
-heterogeneous classifier pool is selected at each learning epoch. Our goal is to achieve greater incremental 
-improvement in accuracy, compared to using a single type of classification model throughout the process. 
-The strategy is evaluated on benchmark data sets. We further consider an application to texture classification 
-problems in sonar mosaic imagery and compare it with non-adaptive active learning and traditional machine 
-learning approaches. Our results show that… conclude that.
-</pre>
+Artificial intelligence (AI) depends heavily on mathematical ideas such as algebra, probability and
+optimisation. This article explains how maths forms the structure behind modern AI systems and how these
+systems are now being used in medicine. Examples include medical image analysis, drug discovery and the
+growing use of “digital twins” to model individual patients. These developments could lead to earlier
+diagnosis and more personalised healthcare for future generations. However, issues such as data privacy,
+bias and uneven access to technology may also create challenges. The aim of this paper is to give a clear
+overview of how maths supports AI in medical settings and to consider how these changes may affect the
+younger generations who will grow up alongside these technologies.
 </p>
 
 <h3 id="Introduction">Introduction</h3>
-<p class="ex1">
-<pre id="Introduction_InText">
-Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an intelligent 
-machine through the interaction of an oracle with the machine system, over a sequence of learning epochs. A 
-distinctive component in an active system is the querying strategy, used to sample candidate training instances 
-from a pool and evaluate them for informativeness, i.e., their potential to improve the classification model. 
-Various strategies have been proposed including: Query by Committee (Seung et al., 1992), Monte Carlo 
-estimation (Roy and McCallum, 2001), uncertainty sampling (Lewis and Gale, 1994) and version space 
-reduction (margin sampling) (Tong and Koller, 2001). After adding newly labelled instances to the current 
-training set, a revised model is subsequently induced.  
-</pre>
+<p class="ex1" id="Introduction_InText">
+Artificial intelligence (AI) is becoming a normal part of modern life, appearing in phones, online
+services, transport systems and hospitals. Even though AI seems complicated, its foundations are
+mathematical. Computers learn patterns using equations, probability and optimisation methods that allow
+them to improve over time. Because of this, mathematics plays a central role in how reliable and useful
+AI systems can be.
+
+It is important for students to understand this connection because AI is likely to influence many careers,
+especially in healthcare, engineering and computing. AI systems are already helping doctors analyse images
+and detect diseases, which can save time and reduce errors. At the same time, AI could affect future
+generations in both positive and negative ways. Young people may benefit from better medical predictions,
+but they might also face issues such as privacy problems or reduced control over automated decisions. This
+article explains how maths supports AI, how AI is being used in medicine, and what future generations may
+experience as these tools continue to develop.
 </p>
 
 <h3 id="Analysis">Analysis and discussion</h3>
 <p class="ex1" id="Analysis_InText">
-Bridge deck repair durability is the subject of much recent research such as in 
-<a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034">Toshihiko et al. (2023)</a>.
-Table 1: Data on cost and lifespan of bridge repairs.
+Mathematics plays a key part in how AI works, especially in systems used for medical tasks. One of the
+main areas is linear algebra, which represents data as vectors and matrices. Medical images, for example,
+are stored as grids of numbers, with each number showing pixel brightness. Neural networks use repeated
+matrix operations to recognise patterns in these images (<a href="#ref-goodfellow-2016">Goodfellow et al., 2016</a>). These
+patterns help the AI identify whether something in the image looks normal or unusual.
+
+Probability and statistics are also essential. Real medical data is rarely perfect, and AI must deal with
+uncertainty. A system might predict that a patient has a 60% chance of a particular condition based on their
+scan. Doctors can then use statistical measures like accuracy and sensitivity to judge how trustworthy the
+model is. These ideas help make AI more reliable in real-life situations, where decisions cannot be based on
+guesses alone.
+
+Optimisation, which uses calculus, allows AI models to improve during training. By comparing predictions with
+correct answers, the model calculates an error value and then adjusts itself to reduce this error. Although
+the maths can get complicated, the basic idea is similar to reducing a quadratic function to find its minimum.
+This supports the learning process that makes AI systems more accurate over time.
+
+In medicine, the impact of mathematically based AI is already visible. A well-known example is a system that
+classifies skin lesions. Researchers found that their AI model could reach a performance level similar to
+specialist dermatologists (<a href="#ref-esteva-2017">Esteva et al., 2017</a>). This means AI can help doctors make faster decisions,
+especially in places where experienced staff may not be available. Another major development is AlphaFold,
+which predicts protein structures using mathematical methods involving geometry and probability
+(<a href="#ref-jumper-2021">Jumper et al., 2021</a>). Understanding protein shapes can speed up drug development and help create new
+treatments.
+
+More recently, the idea of a “digital twin” has emerged. A digital twin is a virtual model of an individual
+patient created using maths, AI and medical data. It can be used to test different treatments before they are
+tried on the real patient. This approach has been studied particularly in heart medicine
+(<a href="#ref-corral-2020">Corral-Acero et al., 2020</a>). Digital twins could become more common for future generations, giving people
+more personalised and safer healthcare.
+
+The table below shows a simplified view of how different AI systems might affect patient outcomes. While the
+exact values vary, the trend is that more advanced AI methods often lead to greater improvements in diagnosis
+and treatment.
+
 </p>
 
 <table class="data-table">
 <tr>
-    <th>£ Cost of repairs</th>
-    <th>Lifespan of repairs (years)</th>
+    <th>Type of AI system</th>
+    <th>Estimated improvement in patient outcomes</th>
 </tr>
-<tr><td>0.7 m</td><td>2</td></tr>
-<tr><td>3.3 m</td><td>4</td></tr>
-<tr><td>2.6 m</td><td>5</td></tr>
-<tr><td>17.4 m</td><td>7</td></tr>
-<tr><td>8.8 m</td><td>9</td></tr>
+<tr><td>Basic rule-based system</td><td>Small improvement</td></tr>
+<tr><td>Traditional machine-learning model</td><td>Moderate improvement</td></tr>
+<tr><td>Deep-learning image model</td><td>Large improvement</td></tr>
+<tr><td>Digital-twin simulation</td><td>Very large improvement</td></tr>
+<tr><td>Fully integrated AI decision support</td><td>Potentially transformative</td></tr>
 </table>
 
-<p class="ex1">Formatting some equations using MathML:</p>
+<p class="ex1">
+As future generations grow up with these technologies, they may experience earlier diagnosis, personalised
+treatment plans and more efficient healthcare systems. However, these benefits come with challenges. Biased
+data can lead to unfair results, and younger people may have to develop stronger digital skills to understand
+how AI systems make decisions. Schools and universities might need to adapt, ensuring students learn both the
+technical and ethical sides of AI. Overall, the effects of mathematical AI will depend on how responsibly it
+is used and how well society prepares for these changes.
+</p>
 
+<p class="ex1">Equation example (MathML):</p>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
     <msup><mi>x</mi><mn>2</mn></msup>
@@ -139,112 +182,69 @@ Table 1: Data on cost and lifespan of bridge repairs.
 
 <h3 id="References">References</h3>
 <p class="ex1">
-<pre>
-Angluin, D (1988), Queries and concept learning. Machine Learning 2, (4), 319–342.
+<span id="ref-corral-2020">Corral-Acero, J. et al. (2020) ‘The “Digital Twin” to enable the vision of precision cardiology’, 
+European Heart Journal, 41(48), pp. 4556–4564.</span><br><br>
 
-Brinker, K (2003), Incorporating Diversity in Active Learning with Support Vector Machines.
+<span id="ref-esteva-2017">Esteva, A. et al. (2017) ‘Dermatologist-level classification of skin cancer with deep neural networks’, 
+Nature, 542(7639), pp. 115–118.</span><br><br>
 
-Bruzzone, L, Chi, M and Marconcini, M (2006), A novel transductive SVM for semisupervised classification 
-of remote-sensing images. IEEE Transactions on Geoscience and Remote Sensing, 44, (11), 3363.
+<span id="ref-goodfellow-2016">Goodfellow, I., Bengio, Y. and Courville, A. (2016) Deep Learning. Cambridge, MA: MIT Press.</span><br><br>
 
-Brunzzone, L and Persello, C (2009), Active learning for classification of remote sensing images.
-
-Campbell, C, Cristianini N, and Smola, A (2000), Query learning with large margin classifiers.
-</pre>
+<span id="ref-jumper-2021">Jumper, J. et al. (2021) ‘Highly accurate protein structure prediction with AlphaFold’, 
+Nature, 596(7873), pp. 583–589.</span>
 </p>
 
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- ////////////////////////////// Adding last update ////////////////////////////// -->
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
-
-<!-- Last commit time display -->
+<!-- Timestamp Script (unchanged) -->
 <div id="last-updated">Loading last update time...</div>
-
-<!-- Verify Button -->
 <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
     Verify Last Modified Time
 </button>
 
 <script>
     async function getLastUpdatedTime() {
-        const username = 'FEPSFY6924326';   // your GitHub username
-        const repo = 'FY6924326';          // your repository name
-       
+        const username = 'FEPSFY6924326';
+        const repo = 'FY6924326';
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
         try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
+            const response = await fetch(url, { method: 'GET', headers: { 'Accept': 'application/vnd.github.v3+json' }});
+            if (!response.ok) throw new Error(`Error fetching data: ${response.status}`);
             const commits = await response.json();
             if (commits && commits.length > 0) {
                 const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
                 document.getElementById('last-updated').innerText =
-                    `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+                `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
             } else {
-                document.getElementById('last-updated').innerText =
-                    'No commits found in the repository.';
+                document.getElementById('last-updated').innerText = 'No commits found.';
             }
         } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText =
-                'Error fetching update time. Please check the repository details.';
+            document.getElementById('last-updated').innerText = 'Error fetching update time.';
         }
     }
-
-    // Function to verify the last update time by re-fetching it from the API
     async function verifyLastUpdatedTime() {
         document.getElementById('last-updated').innerText = 'Verifying...';
         await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
+        alert("Timestamp verified.");
     }
-
-    // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
 
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- ////////////////////////////// Word count function ////////////////////////////// -->
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
-
-<!-- Placeholder for total word count -->
+<!-- Word count -->
 <p id="totalWordCount"></p>
 <hr>
 
 <script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
+  function displayWordCount(sectionId) {
     const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
-    const wordArray = text.trim().split(/\s+/);
-    // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes
-    return wordCount;
+    return text.trim().split(/\s+/).length;
   }
-
-  // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
-    // Display the total word count
+    const intro = displayWordCount("Introduction_InText");
+    const analysis = displayWordCount("Analysis_InText");
+    const total = intro + analysis;
     document.getElementById("totalWordCount").innerText =
-      `Total word count: ${totalWordCount}`;
+      `Total word count: ${total}`;
   }
-
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
+  window.addEventListener("load", displayTotalWordCount);
 </script>
 
 <footer>12 | Page</footer>
