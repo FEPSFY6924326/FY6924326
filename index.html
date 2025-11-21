@@ -102,12 +102,17 @@ trustworthy these predictions actually are.
 Another growing area is personalised medicine, where treatments are tailored to individual patients. The datasets 
 involved can be huge and messy. AI helps reduce complexity and find patterns using clustering and dimensionality-
 reduction methods. But these techniques are only reliable when the maths underneath is stable, otherwise misleading 
-patterns can appear (Rajpurkar et al., 2022).
+patterns can appear (Rajpurkar et al., 2022). This can be worrying for doctors who rely on accurate information to 
+make quick decisions.
 
-Because AI is becoming more common, future engineers and healthcare workers will need enough mathematical literacy 
-to question these systems rather than just accepting whatever output they provide. Even basic statistical awareness 
-helps someone recognise unusual or suspicious predictions. The next section applies these ideas to a more practical 
-example involving medical screening tools.
+AI is spreading fast, and younger generations will encounter it everywhere, not just in engineering or computing 
+courses. Understanding the maths behind AI might become almost as important as learning how to use a computer. 
+Even a basic grasp of statistics helps people recognise when a model might be overconfident or behaving oddly. 
+It also encourages a healthier scepticism, rather than blind trust in whatever output an AI provides.
+
+Although AI is powerful, it is not magic, and part of the challenge for future medical professionals will be 
+learning when to trust an AI tool and when to double-check things manually. The next section applies some of 
+these ideas to a simple medical screening example, where both mathematics and AI play important roles.
 </pre>
 </p>
 
@@ -117,26 +122,36 @@ example involving medical screening tools.
 To see how maths and AI work together in real situations, consider a simplified medical screening problem. Many 
 hospitals need to choose between several diagnostic tools. Cheaper systems cost less upfront, but may fail to detect 
 early-stage disease. More advanced AI systems usually perform better but can be expensive and require specialised 
-equipment (Topol, 2019).
+equipment (Topol, 2019). In practice, hospitals often have to balance performance with budget limitations, which is 
+not always as straightforward as it sounds.
 
 Imagine a hospital comparing five AI-supported screening options. A low-cost model detects around half of early 
 cases, while more advanced models detect a significantly higher percentage. Table 1 below includes fictional but 
-realistic performance values to illustrate how costs and detection rates relate.
+realistic performance values to illustrate how costs and detection rates relate. These values are not perfect, but 
+they are good enough to show the main idea.
 
-If decision-makers only look at upfront cost, the cheapest strategy seems the obvious choice. But a mathematical 
-cost–benefit model using probabilities, long-term outcomes and expected treatment costs can show a very different 
-story. Missing early cancers leads to more expensive treatments later and worse patient outcomes overall. In many 
-cases, the mid-range system actually gives the best long-term value, even though it appears more expensive initially 
+If decision-makers only look at upfront cost, the cheapest strategy seems the obvious choice. However, once we use a 
+basic mathematical cost–benefit model—including probabilities of missed diagnoses, projected long-term treatment 
+costs, and the chance of detecting cases earlier—the cheapest option is often the worst. Missing early cancers leads 
+to more expensive treatments later, and in many cases, poorer patient outcomes overall. Sometimes the mid-range 
+system gives the best balance between cost and performance, even though it looks more expensive at first 
 (Chustecki, 2024).
 
 This is where the relationship between maths and AI becomes clearer. AI provides predictions, such as probability 
 scores or confidence intervals, but mathematics is needed to interpret these predictions correctly. Tools like 
-optimisation models, basic algebra and probability distributions allow hospitals to compare strategies in a fair 
-and structured way.
+optimisation models, basic algebra and probability distributions allow hospitals to compare strategies in a fair and 
+structured way. In other words, the AI gives the numbers, but mathematics helps reveal what those numbers actually 
+mean in practice.
 
-For future generations who will rely heavily on AI in medicine, being able to understand when an AI model is 
-behaving oddly—or when its confidence is unrealistic—will be essential. AI will not replace human judgement, but 
-it can strengthen it if used alongside sound mathematical reasoning.
+For future generations relying heavily on AI in medicine, it will be important not just to use these systems but to 
+question them. Sometimes AI models behave unpredictably when presented with new kinds of data, and without even a 
+basic understanding of statistics, it can be easy to miss warning signs. Being able to recognise when an AI model is 
+being “too confident” or when its predictions don’t match clinical reality is a skill that will matter more and more. 
+Even small mathematical insights—like understanding what probability actually means—can make someone a better 
+decision-maker.
+
+AI will not completely replace doctors or engineers, but when combined with sound mathematical reasoning, it can 
+help support better decisions, reduce errors, and improve patient outcomes.
 </pre>
 </p>
 
@@ -188,7 +203,7 @@ Nature Medicine, 25, pp. 44–56.
 </pre>
 </p>
 
-
+<!-- TIMESTAMP SCRIPT -->
 <div id="last-updated">Loading last update time...</div>
 
 <button onclick="verifyLastUpdatedTime()" 
@@ -222,7 +237,7 @@ async function verifyLastUpdatedTime() {
 window.onload = getLastUpdatedTime;
 </script>
 
-
+<!-- WORD COUNT SCRIPT -->
 <p id="totalWordCount"></p>
 <hr>
 
