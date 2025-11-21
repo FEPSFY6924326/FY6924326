@@ -78,94 +78,114 @@ footer {
 
 <h3 id="Abstract">Abstract</h3>
 <p class="ex1">
-Artificial intelligence (AI) depends heavily on mathematical ideas such as algebra, probability and
-optimisation. This article explains how maths forms the structure behind modern AI systems and how these
-systems are now being used in medicine. Examples include medical image analysis, drug discovery and the
-growing use of “digital twins” to model individual patients. These developments could lead to earlier
-diagnosis and more personalised healthcare for future generations. However, issues such as data privacy,
-bias and uneven access to technology may also create challenges. The aim of this paper is to give a clear
-overview of how maths supports AI in medical settings and to consider how these changes may affect the
-younger generations who will grow up alongside these technologies.
+<pre>
+This paper discusses the relationship between mathematics and artificial intelligence, with a particular focus
+on how these tools are being used, and could be used in the future, within medicine. Modern AI systems rely
+heavily on mathematical ideas such as optimisation, probability and high-dimensional geometry, yet these
+links are often hidden from patients and sometimes even from practitioners. After introducing the basic
+concepts of mathematical modelling in AI, the paper considers a simple case study related to medical
+screening and treatment decisions. The analysis highlights how a combination of mathematical thinking
+and AI tools can support more informed choices, but also shows that there are ethical and practical limits
+which future generations will need to handle carefully.
+</pre>
 </p>
 
 <h3 id="Introduction">Introduction</h3>
-<p class="ex1" id="Introduction_InText">
-Artificial intelligence (AI) is becoming a normal part of modern life, appearing in phones, online
-services, transport systems and hospitals. Even though AI seems complicated, its foundations are
-mathematical. Computers learn patterns using equations, probability and optimisation methods that allow
-them to improve over time. Because of this, mathematics plays a central role in how reliable and useful
-AI systems can be.
+<p class="ex1">
+<pre id="Introduction_InText">
+Artificial intelligence has developed so quickly in recent years that it is now difficult to separate the
+technology from the mathematics that underpins almost every aspect of it. Modern AI systems, including
+neural networks and large language models, rely on mathematical concepts such as optimisation, probability
+theory, high-dimensional geometry and statistical learning. While these ideas are often hidden behind user-
+friendly interfaces, they remain essential for explaining why AI systems behave the way they do and, more
+importantly, how they can be improved in a safe way. The connection between mathematics and AI is
+particularly visible in medicine, where decisions must be based on reliable evidence and where errors can
+have serious consequences for real patients.
 
-It is important for students to understand this connection because AI is likely to influence many careers,
-especially in healthcare, engineering and computing. AI systems are already helping doctors analyse images
-and detect diseases, which can save time and reduce errors. At the same time, AI could affect future
-generations in both positive and negative ways. Young people may benefit from better medical predictions,
-but they might also face issues such as privacy problems or reduced control over automated decisions. This
-article explains how maths supports AI, how AI is being used in medicine, and what future generations may
-experience as these tools continue to develop.
+One of the clearest examples of this link is in medical imaging. Classical image-processing already relied on
+mathematical transforms and differential equations, but AI systems now use vector representations,
+gradient-based learning and non-linear optimisation to detect tumours, classify tissue abnormalities and
+estimate disease progression. Many hospitals are already testing these tools and, although the accuracy still
+varies between different scanners and patient groups, the long-term potential is significant. Future
+generations of doctors may depend heavily on such systems as populations grow older and the demand for
+rapid diagnosis increases. Mathematics, particularly statistics, is central in making sure that AI does not
+simply identify patterns blindly but instead quantifies uncertainty, detects bias and measures the confidence
+of its predictions.
+
+Another important area is personalised medicine, which aims to tailor treatment based on a patient’s genetic,
+physiological or environmental data. The datasets in this area are huge, often containing thousands of
+variables but relatively few patients. AI can extract structure from these data using dimensionality-reduction
+techniques and clustering algorithms, but the stability of these patterns depends on the underlying linear
+algebra and optimisation methods. If the mathematics is poorly understood or misapplied then treatment
+decisions could be based on unstable relationships that disappear when new data are added.
+
+For younger generations growing up surrounded by AI systems, mathematical literacy may therefore become
+almost as important as basic digital literacy. Understanding the mathematical structures behind learning
+algorithms will allow future engineers and medical researchers to design safer systems and to question model
+outputs instead of accepting them as mysterious black-box answers. In the rest of this paper we discuss how
+these ideas might change the future of medical decision making and what challenges still remain.
+</pre>
 </p>
 
 <h3 id="Analysis">Analysis and discussion</h3>
-<p class="ex1" id="Analysis_InText">
-Mathematics plays a key part in how AI works, especially in systems used for medical tasks. One of the
-main areas is linear algebra, which represents data as vectors and matrices. Medical images, for example,
-are stored as grids of numbers, with each number showing pixel brightness. Neural networks use repeated
-matrix operations to recognise patterns in these images (<a href="#ref-goodfellow-2016">Goodfellow et al., 2016</a>). These
-patterns help the AI identify whether something in the image looks normal or unusual.
+<p class="ex1">
+<pre id="Analysis_InText">
+The potential benefits of combining mathematics, artificial intelligence and medicine are quite broad, but they
+are not automatic. A simple example, based on a small data set for the cost and lifespan of different medical
+treatment strategies, helps to illustrate both the opportunities and some of the risks. In many health systems
+there is pressure to choose the cheapest short-term option, for example a basic screening programme with
+limited follow-up. If we only compare initial cost, this option appears attractive, in the same way that a cheap
+repair to a bridge deck can look attractive in civil engineering. However, a more mathematical analysis that
+includes expected lifespan, probability of failure and long-term cost can lead to a different conclusion.
 
-Probability and statistics are also essential. Real medical data is rarely perfect, and AI must deal with
-uncertainty. A system might predict that a patient has a 60% chance of a particular condition based on their
-scan. Doctors can then use statistical measures like accuracy and sensitivity to judge how trustworthy the
-model is. These ideas help make AI more reliable in real-life situations, where decisions cannot be based on
-guesses alone.
+Suppose a hospital can choose between several AI-supported screening strategies. A very cheap option might
+use a small model that is fast but not very sensitive, so early-stage cancers are sometimes missed and patients
+return later needing more intensive treatment. A more expensive option might use a larger neural network
+trained on a wider range of images. This model requires more computing power and specialist staff but it can
+detect subtle patterns that are not obvious to human experts. Using basic ideas from probability and decision
+theory, engineers can estimate the expected number of correctly detected cases, the number of false alarms and
+the downstream costs for each strategy over a period of years.
 
-Optimisation, which uses calculus, allows AI models to improve during training. By comparing predictions with
-correct answers, the model calculates an error value and then adjusts itself to reduce this error. Although
-the maths can get complicated, the basic idea is similar to reducing a quadratic function to find its minimum.
-This supports the learning process that makes AI systems more accurate over time.
+When these quantities are written into even a simple mathematical model, it often turns out that the mid-range
+or more expensive option gives a lower cost per successful diagnosis, once future treatment and social costs
+are included. This kind of reasoning is similar to life-cycle costing in structural engineering, but here the
+objects of interest are patients rather than bridges. The role of AI is to provide accurate risk estimates based
+on high-dimensional data, while mathematics glues together the probabilities, costs and time horizons into a
+coherent decision framework.
 
-In medicine, the impact of mathematically based AI is already visible. A well-known example is a system that
-classifies skin lesions. Researchers found that their AI model could reach a performance level similar to
-specialist dermatologists (<a href="#ref-esteva-2017">Esteva et al., 2017</a>). This means AI can help doctors make faster decisions,
-especially in places where experienced staff may not be available. Another major development is AlphaFold,
-which predicts protein structures using mathematical methods involving geometry and probability
-(<a href="#ref-jumper-2021">Jumper et al., 2021</a>). Understanding protein shapes can speed up drug development and help create new
-treatments.
+For future generations, a key challenge will be making these models understandable to the people who rely on
+them. Doctors and patients need explanations that connect mathematical quantities, such as prediction
+intervals or gradient norms, to everyday ideas of safety and fairness. At the same time, university students in
+engineering, mathematics and computer science will need some exposure to real medical problems so that they
+do not design algorithms in isolation from clinical reality. A model that looks elegant on paper, or even performs
+well on a narrow test set, can behave very differently when exposed to messy hospital data with missing values
+and measurement errors.
 
-More recently, the idea of a “digital twin” has emerged. A digital twin is a virtual model of an individual
-patient created using maths, AI and medical data. It can be used to test different treatments before they are
-tried on the real patient. This approach has been studied particularly in heart medicine
-(<a href="#ref-corral-2020">Corral-Acero et al., 2020</a>). Digital twins could become more common for future generations, giving people
-more personalised and safer healthcare.
-
-The table below shows a simplified view of how different AI systems might affect patient outcomes. While the
-exact values vary, the trend is that more advanced AI methods often lead to greater improvements in diagnosis
-and treatment.
-
+Finally, there is an ethical dimension that simple equations cannot resolve on their own. AI-driven tools will
+almost certainly play a large role in the medicine of the future, from automated triage systems to personalised
+drug design. Mathematics can help to make their behaviour transparent and to set quantitative limits on error
+rates, but society still has to decide how responsibility is shared between algorithms and humans. Accepting
+that these systems will never be perfect, and allowing some room for human judgement and even a few
+inefficiencies, may actually be healthier than pretending that AI can provide a single optimal answer for every
+patient. This slightly untidy balance between rigorous mathematics and real-world constraints is likely to shape
+how future generations experience medical care.
+</pre>
 </p>
 
 <table class="data-table">
 <tr>
-    <th>Type of AI system</th>
-    <th>Estimated improvement in patient outcomes</th>
+    <th>£ Cost of repairs</th>
+    <th>Lifespan of repairs (years)</th>
 </tr>
-<tr><td>Basic rule-based system</td><td>Small improvement</td></tr>
-<tr><td>Traditional machine-learning model</td><td>Moderate improvement</td></tr>
-<tr><td>Deep-learning image model</td><td>Large improvement</td></tr>
-<tr><td>Digital-twin simulation</td><td>Very large improvement</td></tr>
-<tr><td>Fully integrated AI decision support</td><td>Potentially transformative</td></tr>
+<tr><td>0.7 m</td><td>2</td></tr>
+<tr><td>3.3 m</td><td>4</td></tr>
+<tr><td>2.6 m</td><td>5</td></tr>
+<tr><td>17.4 m</td><td>7</td></tr>
+<tr><td>8.8 m</td><td>9</td></tr>
 </table>
 
-<p class="ex1">
-As future generations grow up with these technologies, they may experience earlier diagnosis, personalised
-treatment plans and more efficient healthcare systems. However, these benefits come with challenges. Biased
-data can lead to unfair results, and younger people may have to develop stronger digital skills to understand
-how AI systems make decisions. Schools and universities might need to adapt, ensuring students learn both the
-technical and ethical sides of AI. Overall, the effects of mathematical AI will depend on how responsibly it
-is used and how well society prepares for these changes.
-</p>
+<p class="ex1">Formatting some equations using MathML:</p>
 
-<p class="ex1">Equation example (MathML):</p>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
     <msup><mi>x</mi><mn>2</mn></msup>
@@ -182,69 +202,112 @@ is used and how well society prepares for these changes.
 
 <h3 id="References">References</h3>
 <p class="ex1">
-<span id="ref-corral-2020">Corral-Acero, J. et al. (2020) ‘The “Digital Twin” to enable the vision of precision cardiology’, 
-European Heart Journal, 41(48), pp. 4556–4564.</span><br><br>
+<pre>
+Angluin, D (1988), Queries and concept learning. Machine Learning 2, (4), 319–342.
 
-<span id="ref-esteva-2017">Esteva, A. et al. (2017) ‘Dermatologist-level classification of skin cancer with deep neural networks’, 
-Nature, 542(7639), pp. 115–118.</span><br><br>
+Brinker, K (2003), Incorporating Diversity in Active Learning with Support Vector Machines.
 
-<span id="ref-goodfellow-2016">Goodfellow, I., Bengio, Y. and Courville, A. (2016) Deep Learning. Cambridge, MA: MIT Press.</span><br><br>
+Bruzzone, L, Chi, M and Marconcini, M (2006), A novel transductive SVM for semisupervised classification 
+of remote-sensing images. IEEE Transactions on Geoscience and Remote Sensing, 44, (11), 3363.
 
-<span id="ref-jumper-2021">Jumper, J. et al. (2021) ‘Highly accurate protein structure prediction with AlphaFold’, 
-Nature, 596(7873), pp. 583–589.</span>
+Brunzzone, L and Persello, C (2009), Active learning for classification of remote sensing images.
+
+Campbell, C, Cristianini N, and Smola, A (2000), Query learning with large margin classifiers.
+</pre>
 </p>
 
-<!-- Timestamp Script (unchanged) -->
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////// Adding last update ////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- Last commit time display -->
 <div id="last-updated">Loading last update time...</div>
+
+<!-- Verify Button -->
 <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
     Verify Last Modified Time
 </button>
 
 <script>
     async function getLastUpdatedTime() {
-        const username = 'FEPSFY6924326';
-        const repo = 'FY6924326';
+        const username = 'FEPSFY6924326';   // your GitHub username
+        const repo = 'FY6924326';           // your repository name
+       
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
         try {
-            const response = await fetch(url, { method: 'GET', headers: { 'Accept': 'application/vnd.github.v3+json' }});
-            if (!response.ok) throw new Error(`Error fetching data: ${response.status}`);
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
             const commits = await response.json();
             if (commits && commits.length > 0) {
                 const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+                // Displaying the time on load
                 document.getElementById('last-updated').innerText =
-                `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+                    `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
             } else {
-                document.getElementById('last-updated').innerText = 'No commits found.';
+                document.getElementById('last-updated').innerText =
+                    'No commits found in the repository.';
             }
         } catch (error) {
-            document.getElementById('last-updated').innerText = 'Error fetching update time.';
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText =
+                'Error fetching update time. Please check the repository details.';
         }
     }
+
+    // Function to verify the last update time by re-fetching it from the API
     async function verifyLastUpdatedTime() {
         document.getElementById('last-updated').innerText = 'Verifying...';
         await getLastUpdatedTime();
-        alert("Timestamp verified.");
+        alert("Last modified time has been successfully verified from GitHub API.");
     }
+
+    // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
 
-<!-- Word count -->
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////// Word count function ////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- Placeholder for total word count -->
 <p id="totalWordCount"></p>
 <hr>
 
 <script>
-  function displayWordCount(sectionId) {
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
     const text = document.getElementById(sectionId).textContent;
-    return text.trim().split(/\s+/).length;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
   }
+
+  // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
-    const intro = displayWordCount("Introduction_InText");
-    const analysis = displayWordCount("Analysis_InText");
-    const total = intro + analysis;
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount;
+    // Display the total word count
     document.getElementById("totalWordCount").innerText =
-      `Total word count: ${total}`;
+      `Total word count: ${totalWordCount}`;
   }
-  window.addEventListener("load", displayTotalWordCount);
+
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
 </script>
 
 <footer>12 | Page</footer>
