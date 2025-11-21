@@ -3,11 +3,9 @@
 <head>
 <title>ENG0018 Conference Paper</title>
 
-
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <style>
-
 
 .toc-table {
     width: 250px;
@@ -25,11 +23,9 @@
     padding: 6px 10px;
 }
 
-
 p.ex1 {
     margin-left: 250px;
 }
-
 
 .data-table {
     border-collapse: collapse;
@@ -79,97 +75,88 @@ footer {
 <h3 id="Abstract">Abstract</h3>
 <p class="ex1">
 <pre>
-This paper discusses the relationship between mathematics and artificial intelligence, with a particular focus
-on how these tools are being used, and could be used in the future, within medicine. Modern AI systems rely
-heavily on mathematical ideas such as optimisation, probability and high-dimensional geometry, yet these
-links are often hidden from patients and even from some practitioners. After introducing the basic concepts of
-mathematical modelling in AI, the paper considers a simple example related to medical screening decisions.
-The analysis highlights how a mixture of mathematical reasoning and AI tools can support more informed
-choices, but also shows that there are ethical and practical limits which future generations will need to handle
-carefully.
+This paper explores the connection between mathematics and artificial intelligence, with a particular focus 
+on how these ideas are shaping modern medicine. Much of today’s AI relies on mathematical structures—such 
+as optimisation algorithms and probability models—and although these are rarely visible to patients, they form 
+the backbone of diagnostic tools and treatment-support systems. The paper introduces key mathematical 
+concepts used in AI and then applies them to a simplified medical screening scenario. By examining different 
+AI screening options with varying costs and detection rates, the analysis shows how mathematical reasoning 
+can clarify when AI improves long-term outcomes and when it might introduce new risks. This is increasingly 
+important for future generations as AI becomes more embedded in healthcare.
 </pre>
 </p>
 
 <h3 id="Introduction">Introduction</h3>
 <p class="ex1">
 <pre id="Introduction_InText">
-Artificial intelligence has moved so quickly into everyday life that it can sometimes feel as if the maths
-behind it has been forgotten or pushed out of sight. But the truth is that almost every AI system we use today,
-whether it’s a medical image classifier or a chat-based model, still depends heavily on mathematical ideas.
-Things like optimisation, probability, geometry and linear algebra are constantly running in the background,
-even if most people (including many users in healthcare) never see them directly. This connection becomes
-especially important when we look at how AI is starting to influence medical practice, because medical
-decisions rely on evidence, reliability and fairness – and mathematics is what allows us to check those things.
+Artificial intelligence has accelerated so quickly that it is easy to forget how dependent it still is on quite 
+traditional areas of mathematics. Even systems that appear “intelligent” on the surface—like tumour-detection 
+networks or diagnostic chatbots—are powered underneath by probability, linear algebra, optimisation, and 
+geometry (Esteva et al., 2019). These ideas do not disappear just because AI interfaces look simple; they 
+remain essential for checking accuracy, fairness and reliability, especially in something as sensitive as medical 
+decision-making (Topol, 2019).
 
-A clear example of this is medical imaging, which has become one of the main “success stories’’ of AI.
-Traditional medical image analysis relied on things like Fourier transforms or edge-detection filters, which are
-very mathematical but fairly rigid. In contrast, modern AI systems learn their own internal mathematical
-representations using gradient descent and high-dimensional optimisation. These models are sometimes
-surprisingly good at spotting tumours or tissue changes that humans miss, although they can also behave oddly
-when the input quality changes. Many hospitals are trialling these systems already, and even though they’re not
-perfect, they could become almost essential as populations grow older and the demand for quick diagnosis gets
-higher. Probability and statistics play a big role here because they help explain how confident the model is and
-whether its decision can be trusted in borderline cases.
+Medical imaging is often cited as one of the biggest success stories in AI-assisted healthcare. Early image 
+processing techniques used Fourier transforms or edge filters—very strict mathematical tools. But modern AI 
+systems learn flexible mathematical representations using gradient descent and high-dimensional spaces. 
+Hospitals trial these tools because they can sometimes detect tumours earlier than humans, although their 
+performance varies with scanner quality and training data (Crossnohere et al., 2022). This is where statistics 
+matters: doctors need to know how confident the AI is, and how often it tends to make borderline mistakes.
 
-Another growing area is personalised medicine, where treatments are chosen based on a patient’s genetics or
-medical history. The datasets in this area are huge and messy, and AI can help recognise patterns using
-clustering or dimensionality-reduction techniques. But this only works if the mathematics underneath is solid,
-because otherwise the patterns we think we’ve found might disappear as soon as new data are added. This is a
-real issue in modern healthcare because doctors can’t depend on unstable predictions.
+Another growing area is personalised medicine, which uses patient-specific data such as genetics or lifestyle 
+patterns. AI helps interpret extremely large datasets using clustering and dimensionality-reduction techniques, 
+but these only work well when the mathematical foundations are stable. Otherwise, the “patterns” found by 
+the model may simply reflect noise or bias (Rajpurkar et al., 2022). This is a real concern in healthcare where 
+unreliable predictions can lead to poor treatment choices.
 
-For future generations, especially students going into engineering, computing or medicine, understanding the
-maths behind AI might end up being as important as traditional digital skills. If people know even the basics of
-how these systems work, they’re less likely to treat AI as a mysterious black box and more likely to question it
-when something doesn’t look right. The aim of the next section is to look at how these ideas play out in a more
-practical, simplified example, and to think about what this might mean for the future of medical decision
-making.
+As AI becomes more common, students and future engineers will need a better understanding of the maths 
+behind it—not just how to run models but how to question them. Knowing even basic statistics helps people 
+spot unusual behaviour, like an AI giving overconfident predictions on low-quality scans. The next section 
+develops these ideas through a more concrete medical screening example.
 </pre>
 </p>
 
 <h3 id="Analysis">Analysis and discussion</h3>
 <p class="ex1">
 <pre id="Analysis_InText">
-When thinking about how maths and AI can actually change medical practice, it helps to look at a simple, but
-realistic example. In medicine, especially in screening and early-diagnosis programmes, hospitals often have to
-choose between different tools or strategies. Some are cheap and quick but not very accurate. Others are more
-advanced, usually AI-assisted, and cost more upfront. This feels similar to engineering decisions where the
-cheapest option is not always the smartest long-term choice.
+To understand how maths and AI interact in real healthcare settings, it is useful to consider a simplified but 
+realistic example. Hospitals choosing between different cancer-screening tools face a trade-off: cheaper 
+options are more affordable but less accurate, while advanced AI systems can detect early-stage disease more 
+effectively but may be too expensive for smaller clinics to adopt (Alowais et al., 2023).
 
-Imagine a hospital choosing between different AI-supported screening systems for a particular cancer. One
-system is cheap and uses a smaller model that is reasonably fast but not very sensitive. It misses some early-
-stage problems, which means patients return later needing more aggressive treatment. A second option costs
-more but uses a better trained model on a wider and more diverse dataset. It picks up subtle abnormalities and
-gives more reliable predictions. A third, very advanced option might exist as well, but is so expensive that it
-would eat most of the available budget. Table 1 shows a simple, made-up comparison between five possible AI
-screening strategies, where higher cost generally brings better early detection.
+Imagine a hospital comparing five AI-assisted screening systems. The cheapest system uses a small neural 
+network model and misses many early cases. A mid-range system achieves better sensitivity because it is trained 
+on a more diverse dataset. The most advanced option uses a deep learning model that performs extremely well, 
+but its cost is so high that it could strain hospital budgets. Table 1 presents a simplified set of figures showing 
+how annual cost correlates with early-detection performance.
 
-If we only look at the purchase price, the cheapest option always wins. However, even a basic mathematical
-model that includes probabilities, expected costs and a time horizon of several years tells a different story. A
-cheap system that misses early cases produces hidden costs: extra treatments later, longer hospital stays and, in
-some cases, worse outcomes. A mid-range system that seems too expensive at first can actually minimise the
-cost per successful diagnosis once these future expenses are included. This kind of life-cycle style thinking is
-familiar in engineering, but here the “assets” are patients rather than structures.
+If a hospital looks only at the upfront cost, the cheapest tool seems the obvious winner. But once we use even 
+a basic mathematical model—including probabilities of missed diagnoses, expected long-term treatment costs 
+and population risk—the picture changes. Missing early-stage cancers leads to far greater costs later on, both 
+financially and in terms of patient outcomes (Chustecki, 2024). Surprisingly, a mid-range AI system may offer 
+the best long-term value even though it appears expensive at first glance.
 
-This is where AI and mathematics genuinely work together. AI provides predictions about who is likely to have
-a particular condition; mathematics turns those predictions into decisions by combining them with costs, risks
-and limits on resources. Probability distributions help estimate uncertainty, optimisation can suggest good
-screening schedules, and relatively simple algebra is enough to compare strategies over time.
+This is where mathematics ties everything together. AI supplies risk predictions, but mathematical reasoning 
+helps convert predictions into decisions. Tools such as probability distributions, optimisation models and even 
+simple algebra can help predict long-term trends and compare strategies fairly (He et al., 2019). AI alone 
+cannot judge which option is best; it simply outputs probabilities. The decision comes from combining these 
+probabilities with realistic cost models.
 
-For future generations of students and doctors, the important skill will not just be using AI tools but questioning
-them. Real hospital data are messy, incomplete and sometimes biased. A basic understanding of statistics and
-modelling makes it easier to see when an apparently “smart” system is giving suspiciously confident answers or
-behaving strangely on new patients. AI is unlikely to replace human judgement, but it can support it, as long as
-both the mathematical reasoning and the limitations are understood honestly.
+For future generations, the key challenge is not just using AI but understanding its limitations. Medical data is 
+often messy—full of missing values, measurement errors or unconscious biases. A student who understands 
+basic statistics will recognise when an AI model seems “too confident” or is behaving strangely on new 
+patients. AI is unlikely to replace human judgement entirely, but it can strengthen it when both mathematical 
+thinking and ethical awareness are applied together.
 </pre>
 </p>
 
-<p class="ex1">Table 1: Indicative annual cost and early-detection performance for different AI-supported screening strategies.</p>
+<p class="ex1">Table 1: Annual cost and early-detection performance for different AI screening strategies.</p>
 
 <table class="data-table">
 <tr>
-    <th>AI screening strategy</th>
-    <th>Annual programme cost (£ million)</th>
-    <th>Early cases detected (%)</th>
+    <th>AI Screening Strategy</th>
+    <th>Annual Programme Cost (£m)</th>
+    <th>Early Cases Detected (%)</th>
 </tr>
 <tr><td>Strategy A</td><td>0.7</td><td>55</td></tr>
 <tr><td>Strategy B</td><td>3.3</td><td>65</td></tr>
@@ -178,8 +165,7 @@ both the mathematical reasoning and the limitations are understood honestly.
 <tr><td>Strategy E</td><td>8.8</td><td>90</td></tr>
 </table>
 
-<p class="ex1">As a very simple reminder that AI systems are ultimately built on mathematical expressions and models,
-consider the following quadratic equation written in MathML:</p>
+<p class="ex1">AI systems rely on mathematical rules. For example, even a simple quadratic equation like:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -196,113 +182,83 @@ consider the following quadratic equation written in MathML:</p>
 </math>
 
 <h3 id="References">References</h3>
-<p class="ex1">
-<pre>
-Angluin, D (1988), Queries and concept learning. Machine Learning 2, (4), 319–342.
+<p class="ex1"><pre>
+Alowais, S.A., Alqahtani, F. and Alanazi, S. (2023) ‘Revolutionising healthcare: the role of artificial 
+intelligence in clinical practice’, BMC Medical Education, 23(469), pp. 1–10.
 
-Brinker, K (2003), Incorporating Diversity in Active Learning with Support Vector Machines.
+Chustecki, M. (2024) ‘Benefits and risks of AI in health care: narrative review’, Interactive Journal of 
+Medical Research, 13(1), e53616.
 
-Bruzzone, L, Chi, M and Marconcini, M (2006), A novel transductive SVM for semisupervised classification 
-of remote-sensing images. IEEE Transactions on Geoscience and Remote Sensing, 44, (11), 3363.
+Crossnohere, N.L., Arcia, A., Heffernan, K., Xu, J. and Lachance, C. (2022) ‘Guidelines for artificial 
+intelligence in medicine: literature review and framework’, Journal of Medical Internet Research, 24(8), 
+e36823.
 
-Brunzzone, L and Persello, C (2009), Active learning for classification of remote sensing images.
+Esteva, A., Robicquet, A., Ramsundar, B. et al. (2019) ‘A guide to deep learning in healthcare’, Nature 
+Medicine, 25(1), pp. 24–29.
 
-Campbell, C, Cristianini N, and Smola, A (2000), Query learning with large margin classifiers.
-</pre>
-</p>
+Topol, E. (2019) ‘High-performance medicine: the convergence of human and artificial intelligence’, 
+Nature Medicine, 25, pp. 44–56.
 
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- ////////////////////////////// Adding last update ////////////////////////////// -->
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
+Rajpurkar, P., Chen, E., Banerjee, O. and Topol, E. (2022) ‘AI in healthcare: the inevitable and the 
+unknown’, Cell Reports Medicine, 3(5), 100673.
 
+He, J., Baxter, S., Xu, J., Zhou, X. and Zhang, K. (2019) ‘The practical implementation of artificial 
+intelligence technologies in medicine’, Nature Medicine, 25(1), pp. 30–36.
+</pre></p>
 
+<!-- TIMESTAMP SCRIPT -->
 <div id="last-updated">Loading last update time...</div>
 
-
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    Verify Last Modified Time
+<button onclick="verifyLastUpdatedTime()" style="display:block;margin:10px auto;padding:8px 16px;">
+Verify Last Modified Time
 </button>
 
 <script>
-    async function getLastUpdatedTime() {
-        const username = 'sr02372';   
-        const repo = 'FY6924326';           
-       
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
-                document.getElementById('last-updated').innerText =
-                    `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-            } else {
-                document.getElementById('last-updated').innerText =
-                    'No commits found in the repository.';
-            }
-        } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText =
-                'Error fetching update time. Please check the repository details.';
-        }
+async function getLastUpdatedTime() {
+    const username = 'sr02372';
+    const repo = 'FY6924326';
+    const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+    try {
+        const response = await fetch(url);
+        const commits = await response.json();
+        const lastCommitDate = new Date(commits[0].commit.committer.date);
+        document.getElementById('last-updated').innerText =
+            `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+    } catch (error) {
+        document.getElementById('last-updated').innerText =
+            'Error fetching update time.';
     }
+}
 
-    
-    async function verifyLastUpdatedTime() {
-        document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
-    }
+async function verifyLastUpdatedTime() {
+    document.getElementById('last-updated').innerText = 'Verifying...';
+    await getLastUpdatedTime();
+    alert("Last modified time verified using GitHub API.");
+}
 
-    // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
+window.onload = getLastUpdatedTime;
 </script>
 
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- ////////////////////////////// Word count function ////////////////////////////// -->
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
-
-
+<!-- WORD COUNT SCRIPT -->
 <p id="totalWordCount"></p>
 <hr>
 
 <script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
-    
+function displayWordCount(sectionId) {
     const text = document.getElementById(sectionId).textContent;
-    
     const wordArray = text.trim().split(/\s+/);
-    
-    const wordCount = wordArray.length;
-    
-    return wordCount;
-  }
+    return wordArray.length;
+}
 
-  
-  function displayTotalWordCount() {
-    
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    
-    const totalWordCount = IntroductionCount + AnalysisCount;
-    
+function displayTotalWordCount() {
+    const intro = displayWordCount("Introduction_InText");
+    const analysis = displayWordCount("Analysis_InText");
+    const total = intro + analysis;
     document.getElementById("totalWordCount").innerText =
-      `Total word count: ${totalWordCount}`;
-  }
+        `Total word count: ${total}`;
+}
 
-  
-  window.onload = displayTotalWordCount;
+window.onload = displayTotalWordCount;
 </script>
 
 <footer>12 | Page</footer>
