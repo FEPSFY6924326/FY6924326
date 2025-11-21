@@ -75,82 +75,72 @@ footer {
 <h3 id="Abstract">Abstract</h3>
 <p class="ex1">
 <pre>
-This paper explores the connection between mathematics and artificial intelligence, with a particular focus 
-on how these ideas are shaping modern medicine. Much of today’s AI relies on mathematical structures—such 
-as optimisation algorithms and probability models—and although these are rarely visible to patients, they form 
-the backbone of diagnostic tools and treatment-support systems. The paper introduces key mathematical 
-concepts used in AI and then applies them to a simplified medical screening scenario. By examining different 
-AI screening options with varying costs and detection rates, the analysis shows how mathematical reasoning 
-can clarify when AI improves long-term outcomes and when it might introduce new risks. This is increasingly 
-important for future generations as AI becomes more embedded in healthcare.
+This paper looks at the relationship between mathematics and artificial intelligence, mainly in the context 
+of modern medicine. Even though people often see AI as something mysterious, much of it is actually grounded 
+in maths, especially optimisation, probability and geometry. After outlining some of the fundamental ideas, 
+the paper uses a simplified medical screening example to show how maths and AI come together when making 
+practical decisions. The aim is to highlight both the benefits and the limitations, which future generations 
+will need to deal with carefully.
 </pre>
 </p>
 
 <h3 id="Introduction">Introduction</h3>
 <p class="ex1">
 <pre id="Introduction_InText">
-Artificial intelligence has accelerated so quickly that it is easy to forget how dependent it still is on quite 
-traditional areas of mathematics. Even systems that appear “intelligent” on the surface—like tumour-detection 
-networks or diagnostic chatbots—are powered underneath by probability, linear algebra, optimisation, and 
-geometry (Esteva et al., 2019). These ideas do not disappear just because AI interfaces look simple; they 
-remain essential for checking accuracy, fairness and reliability, especially in something as sensitive as medical 
-decision-making (Topol, 2019).
+Artificial intelligence has developed so rapidly that sometimes people forget how reliant it still is on basic 
+mathematical ideas. Even highly advanced systems used in hospitals, such as tumour-detection networks or 
+prediction models, are based on things like optimisation, probability and linear algebra (Esteva et al., 2019). 
+These mathematical structures remain important for checking reliability, bias and overall performance, especially 
+in medicine where mistakes carry serious consequences.
 
-Medical imaging is often cited as one of the biggest success stories in AI-assisted healthcare. Early image 
-processing techniques used Fourier transforms or edge filters—very strict mathematical tools. But modern AI 
-systems learn flexible mathematical representations using gradient descent and high-dimensional spaces. 
-Hospitals trial these tools because they can sometimes detect tumours earlier than humans, although their 
-performance varies with scanner quality and training data (Crossnohere et al., 2022). This is where statistics 
-matters: doctors need to know how confident the AI is, and how often it tends to make borderline mistakes.
+Medical imaging is often one of the first examples discussed when talking about AI in healthcare. Older systems 
+depended on fixed mathematical methods, but modern deep learning models learn patterns from thousands of images. 
+They can be surprisingly effective at spotting tumours, although not perfect, and sometimes behave strangely when 
+image quality varies (Crossnohere et al., 2022). Probability and uncertainty estimates help doctors understand how 
+trustworthy these predictions actually are.
 
-Another growing area is personalised medicine, which uses patient-specific data such as genetics or lifestyle 
-patterns. AI helps interpret extremely large datasets using clustering and dimensionality-reduction techniques, 
-but these only work well when the mathematical foundations are stable. Otherwise, the “patterns” found by 
-the model may simply reflect noise or bias (Rajpurkar et al., 2022). This is a real concern in healthcare where 
-unreliable predictions can lead to poor treatment choices.
+Another growing area is personalised medicine, where treatments are tailored to individual patients. The datasets 
+involved can be huge and messy. AI helps reduce complexity and find patterns using clustering and dimensionality-
+reduction methods. But these techniques are only reliable when the maths underneath is stable, otherwise misleading 
+patterns can appear (Rajpurkar et al., 2022).
 
-As AI becomes more common, students and future engineers will need a better understanding of the maths 
-behind it—not just how to run models but how to question them. Knowing even basic statistics helps people 
-spot unusual behaviour, like an AI giving overconfident predictions on low-quality scans. The next section 
-develops these ideas through a more concrete medical screening example.
+Because AI is becoming more common, future engineers and healthcare workers will need enough mathematical literacy 
+to question these systems rather than just accepting whatever output they provide. Even basic statistical awareness 
+helps someone recognise unusual or suspicious predictions. The next section applies these ideas to a more practical 
+example involving medical screening tools.
 </pre>
 </p>
 
 <h3 id="Analysis">Analysis and discussion</h3>
 <p class="ex1">
 <pre id="Analysis_InText">
-To understand how maths and AI interact in real healthcare settings, it is useful to consider a simplified but 
-realistic example. Hospitals choosing between different cancer-screening tools face a trade-off: cheaper 
-options are more affordable but less accurate, while advanced AI systems can detect early-stage disease more 
-effectively but may be too expensive for smaller clinics to adopt (Alowais et al., 2023).
+To see how maths and AI work together in real situations, consider a simplified medical screening problem. Many 
+hospitals need to choose between several diagnostic tools. Cheaper systems cost less upfront, but may fail to detect 
+early-stage disease. More advanced AI systems usually perform better but can be expensive and require specialised 
+equipment (Topol, 2019).
 
-Imagine a hospital comparing five AI-assisted screening systems. The cheapest system uses a small neural 
-network model and misses many early cases. A mid-range system achieves better sensitivity because it is trained 
-on a more diverse dataset. The most advanced option uses a deep learning model that performs extremely well, 
-but its cost is so high that it could strain hospital budgets. Table 1 presents a simplified set of figures showing 
-how annual cost correlates with early-detection performance.
+Imagine a hospital comparing five AI-supported screening options. A low-cost model detects around half of early 
+cases, while more advanced models detect a significantly higher percentage. Table 1 below includes fictional but 
+realistic performance values to illustrate how costs and detection rates relate.
 
-If a hospital looks only at the upfront cost, the cheapest tool seems the obvious winner. But once we use even 
-a basic mathematical model—including probabilities of missed diagnoses, expected long-term treatment costs 
-and population risk—the picture changes. Missing early-stage cancers leads to far greater costs later on, both 
-financially and in terms of patient outcomes (Chustecki, 2024). Surprisingly, a mid-range AI system may offer 
-the best long-term value even though it appears expensive at first glance.
+If decision-makers only look at upfront cost, the cheapest strategy seems the obvious choice. But a mathematical 
+cost–benefit model using probabilities, long-term outcomes and expected treatment costs can show a very different 
+story. Missing early cancers leads to more expensive treatments later and worse patient outcomes overall. In many 
+cases, the mid-range system actually gives the best long-term value, even though it appears more expensive initially 
+(Chustecki, 2024).
 
-This is where mathematics ties everything together. AI supplies risk predictions, but mathematical reasoning 
-helps convert predictions into decisions. Tools such as probability distributions, optimisation models and even 
-simple algebra can help predict long-term trends and compare strategies fairly (He et al., 2019). AI alone 
-cannot judge which option is best; it simply outputs probabilities. The decision comes from combining these 
-probabilities with realistic cost models.
+This is where the relationship between maths and AI becomes clearer. AI provides predictions, such as probability 
+scores or confidence intervals, but mathematics is needed to interpret these predictions correctly. Tools like 
+optimisation models, basic algebra and probability distributions allow hospitals to compare strategies in a fair 
+and structured way.
 
-For future generations, the key challenge is not just using AI but understanding its limitations. Medical data is 
-often messy—full of missing values, measurement errors or unconscious biases. A student who understands 
-basic statistics will recognise when an AI model seems “too confident” or is behaving strangely on new 
-patients. AI is unlikely to replace human judgement entirely, but it can strengthen it when both mathematical 
-thinking and ethical awareness are applied together.
+For future generations who will rely heavily on AI in medicine, being able to understand when an AI model is 
+behaving oddly—or when its confidence is unrealistic—will be essential. AI will not replace human judgement, but 
+it can strengthen it if used alongside sound mathematical reasoning.
 </pre>
 </p>
 
-<p class="ex1">Table 1: Annual cost and early-detection performance for different AI screening strategies.</p>
+<p class="ex1">Table 1: Example annual costs and early-detection rates for different AI screening strategies.</p>
 
 <table class="data-table">
 <tr>
@@ -158,14 +148,14 @@ thinking and ethical awareness are applied together.
     <th>Annual Programme Cost (£m)</th>
     <th>Early Cases Detected (%)</th>
 </tr>
-<tr><td>Strategy A</td><td>0.7</td><td>55</td></tr>
-<tr><td>Strategy B</td><td>3.3</td><td>65</td></tr>
-<tr><td>Strategy C</td><td>2.6</td><td>70</td></tr>
-<tr><td>Strategy D</td><td>17.4</td><td>82</td></tr>
-<tr><td>Strategy E</td><td>8.8</td><td>90</td></tr>
+<tr><td>Basic Model</td><td>0.7</td><td>55</td></tr>
+<tr><td>Model B</td><td>3.3</td><td>65</td></tr>
+<tr><td>Model C</td><td>2.6</td><td>70</td></tr>
+<tr><td>Advanced Model</td><td>17.4</td><td>82</td></tr>
+<tr><td>Enhanced Model</td><td>8.8</td><td>90</td></tr>
 </table>
 
-<p class="ex1">AI systems rely on mathematical rules. For example, even a simple quadratic equation like:</p>
+<p class="ex1">A simple example of mathematical structure appears even in a basic quadratic:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -182,34 +172,27 @@ thinking and ethical awareness are applied together.
 </math>
 
 <h3 id="References">References</h3>
-<p class="ex1"><pre>
-Alowais, S.A., Alqahtani, F. and Alanazi, S. (2023) ‘Revolutionising healthcare: the role of artificial 
-intelligence in clinical practice’, BMC Medical Education, 23(469), pp. 1–10.
+<p class="ex1">
+<pre>
+Chustecki, M. (2024) ‘Benefits and risks of AI in health care: narrative review’, Interactive 
+Journal of Medical Research, 13(1), e53616.
 
-Chustecki, M. (2024) ‘Benefits and risks of AI in health care: narrative review’, Interactive Journal of 
-Medical Research, 13(1), e53616.
+Crossnohere, N.L., Arcia, A., Heffernan, K., Xu, J. and Lachance, C. (2022) ‘Guidelines for 
+artificial intelligence in medicine’, Journal of Medical Internet Research, 24(8), e36823.
 
-Crossnohere, N.L., Arcia, A., Heffernan, K., Xu, J. and Lachance, C. (2022) ‘Guidelines for artificial 
-intelligence in medicine: literature review and framework’, Journal of Medical Internet Research, 24(8), 
-e36823.
-
-Esteva, A., Robicquet, A., Ramsundar, B. et al. (2019) ‘A guide to deep learning in healthcare’, Nature 
-Medicine, 25(1), pp. 24–29.
+Esteva, A., Robicquet, A., Ramsundar, B. et al. (2019) ‘A guide to deep learning in healthcare’, 
+Nature Medicine, 25(1), pp. 24–29.
 
 Topol, E. (2019) ‘High-performance medicine: the convergence of human and artificial intelligence’, 
 Nature Medicine, 25, pp. 44–56.
-
-Rajpurkar, P., Chen, E., Banerjee, O. and Topol, E. (2022) ‘AI in healthcare: the inevitable and the 
-unknown’, Cell Reports Medicine, 3(5), 100673.
-
-He, J., Baxter, S., Xu, J., Zhou, X. and Zhang, K. (2019) ‘The practical implementation of artificial 
-intelligence technologies in medicine’, Nature Medicine, 25(1), pp. 30–36.
-</pre></p>
+</pre>
+</p>
 
 <!-- TIMESTAMP SCRIPT -->
 <div id="last-updated">Loading last update time...</div>
 
-<button onclick="verifyLastUpdatedTime()" style="display:block;margin:10px auto;padding:8px 16px;">
+<button onclick="verifyLastUpdatedTime()" 
+style="display:block;margin:10px auto;padding:8px 16px;">
 Verify Last Modified Time
 </button>
 
