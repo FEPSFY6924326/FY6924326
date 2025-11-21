@@ -33,7 +33,7 @@ p.ex1 {
 /* Table formatting used in Analysis section */
 .data-table {
     border-collapse: collapse;
-    width: 350px;
+    width: 450px;
 }
 
 .data-table th, .data-table td {
@@ -82,121 +82,116 @@ footer {
 This paper discusses the relationship between mathematics and artificial intelligence, with a particular focus
 on how these tools are being used, and could be used in the future, within medicine. Modern AI systems rely
 heavily on mathematical ideas such as optimisation, probability and high-dimensional geometry, yet these
-links are often hidden from patients and sometimes even from practitioners. After introducing the basic
-concepts of mathematical modelling in AI, the paper considers a simple case study related to medical
-screening and treatment decisions. The analysis highlights how a combination of mathematical thinking
-and AI tools can support more informed choices, but also shows that there are ethical and practical limits
-which future generations will need to handle carefully.
+links are often hidden from patients and even from some practitioners. After introducing the basic concepts of
+mathematical modelling in AI, the paper considers a simple example related to medical screening decisions.
+The analysis highlights how a mixture of mathematical reasoning and AI tools can support more informed
+choices, but also shows that there are ethical and practical limits which future generations will need to handle
+carefully.
 </pre>
 </p>
 
 <h3 id="Introduction">Introduction</h3>
 <p class="ex1">
 <pre id="Introduction_InText">
-Artificial intelligence has developed so quickly in recent years that it is now difficult to separate the
-technology from the mathematics that underpins almost every aspect of it. Modern AI systems, including
-neural networks and large language models, rely on mathematical concepts such as optimisation, probability
-theory, high-dimensional geometry and statistical learning. While these ideas are often hidden behind user-
-friendly interfaces, they remain essential for explaining why AI systems behave the way they do and, more
-importantly, how they can be improved in a safe way. The connection between mathematics and AI is
-particularly visible in medicine, where decisions must be based on reliable evidence and where errors can
-have serious consequences for real patients.
+Artificial intelligence has moved so quickly into everyday life that it can sometimes feel as if the maths
+behind it has been forgotten or pushed out of sight. But the truth is that almost every AI system we use today,
+whether it’s a medical image classifier or a chat-based model, still depends heavily on mathematical ideas.
+Things like optimisation, probability, geometry and linear algebra are constantly running in the background,
+even if most people (including many users in healthcare) never see them directly. This connection becomes
+especially important when we look at how AI is starting to influence medical practice, because medical
+decisions rely on evidence, reliability and fairness – and mathematics is what allows us to check those things.
 
-One of the clearest examples of this link is in medical imaging. Classical image-processing already relied on
-mathematical transforms and differential equations, but AI systems now use vector representations,
-gradient-based learning and non-linear optimisation to detect tumours, classify tissue abnormalities and
-estimate disease progression. Many hospitals are already testing these tools and, although the accuracy still
-varies between different scanners and patient groups, the long-term potential is significant. Future
-generations of doctors may depend heavily on such systems as populations grow older and the demand for
-rapid diagnosis increases. Mathematics, particularly statistics, is central in making sure that AI does not
-simply identify patterns blindly but instead quantifies uncertainty, detects bias and measures the confidence
-of its predictions.
+A clear example of this is medical imaging, which has become one of the main “success stories’’ of AI.
+Traditional medical image analysis relied on things like Fourier transforms or edge-detection filters, which are
+very mathematical but fairly rigid. In contrast, modern AI systems learn their own internal mathematical
+representations using gradient descent and high-dimensional optimisation. These models are sometimes
+surprisingly good at spotting tumours or tissue changes that humans miss, although they can also behave oddly
+when the input quality changes. Many hospitals are trialling these systems already, and even though they’re not
+perfect, they could become almost essential as populations grow older and the demand for quick diagnosis gets
+higher. Probability and statistics play a big role here because they help explain how confident the model is and
+whether its decision can be trusted in borderline cases.
 
-Another important area is personalised medicine, which aims to tailor treatment based on a patient’s genetic,
-physiological or environmental data. The datasets in this area are huge, often containing thousands of
-variables but relatively few patients. AI can extract structure from these data using dimensionality-reduction
-techniques and clustering algorithms, but the stability of these patterns depends on the underlying linear
-algebra and optimisation methods. If the mathematics is poorly understood or misapplied then treatment
-decisions could be based on unstable relationships that disappear when new data are added.
+Another growing area is personalised medicine, where treatments are chosen based on a patient’s genetics or
+medical history. The datasets in this area are huge and messy, and AI can help recognise patterns using
+clustering or dimensionality-reduction techniques. But this only works if the mathematics underneath is solid,
+because otherwise the patterns we think we’ve found might disappear as soon as new data are added. This is a
+real issue in modern healthcare because doctors can’t depend on unstable predictions.
 
-For younger generations growing up surrounded by AI systems, mathematical literacy may therefore become
-almost as important as basic digital literacy. Understanding the mathematical structures behind learning
-algorithms will allow future engineers and medical researchers to design safer systems and to question model
-outputs instead of accepting them as mysterious black-box answers. In the rest of this paper we discuss how
-these ideas might change the future of medical decision making and what challenges still remain.
+For future generations, especially students going into engineering, computing or medicine, understanding the
+maths behind AI might end up being as important as traditional digital skills. If people know even the basics of
+how these systems work, they’re less likely to treat AI as a mysterious black box and more likely to question it
+when something doesn’t look right. The aim of the next section is to look at how these ideas play out in a more
+practical, simplified example, and to think about what this might mean for the future of medical decision
+making.
 </pre>
 </p>
 
 <h3 id="Analysis">Analysis and discussion</h3>
 <p class="ex1">
 <pre id="Analysis_InText">
-The potential benefits of combining mathematics, artificial intelligence and medicine are quite broad, but they
-are not automatic. A simple example, based on a small data set for the cost and lifespan of different medical
-treatment strategies, helps to illustrate both the opportunities and some of the risks. In many health systems
-there is pressure to choose the cheapest short-term option, for example a basic screening programme with
-limited follow-up. If we only compare initial cost, this option appears attractive, in the same way that a cheap
-repair to a bridge deck can look attractive in civil engineering. However, a more mathematical analysis that
-includes expected lifespan, probability of failure and long-term cost can lead to a different conclusion.
+When thinking about how maths and AI can actually change medical practice, it helps to look at a simple, but
+realistic example. In medicine, especially in screening and early-diagnosis programmes, hospitals often have to
+choose between different tools or strategies. Some are cheap and quick but not very accurate. Others are more
+advanced, usually AI-assisted, and cost more upfront. This feels similar to engineering decisions where the
+cheapest option is not always the smartest long-term choice.
 
-Suppose a hospital can choose between several AI-supported screening strategies. A very cheap option might
-use a small model that is fast but not very sensitive, so early-stage cancers are sometimes missed and patients
-return later needing more intensive treatment. A more expensive option might use a larger neural network
-trained on a wider range of images. This model requires more computing power and specialist staff but it can
-detect subtle patterns that are not obvious to human experts. Using basic ideas from probability and decision
-theory, engineers can estimate the expected number of correctly detected cases, the number of false alarms and
-the downstream costs for each strategy over a period of years.
+Imagine a hospital choosing between different AI-supported screening systems for a particular cancer. One
+system is cheap and uses a smaller model that is reasonably fast but not very sensitive. It misses some early-
+stage problems, which means patients return later needing more aggressive treatment. A second option costs
+more but uses a better trained model on a wider and more diverse dataset. It picks up subtle abnormalities and
+gives more reliable predictions. A third, very advanced option might exist as well, but is so expensive that it
+would eat most of the available budget. Table 1 shows a simple, made-up comparison between five possible AI
+screening strategies, where higher cost generally brings better early detection.
 
-When these quantities are written into even a simple mathematical model, it often turns out that the mid-range
-or more expensive option gives a lower cost per successful diagnosis, once future treatment and social costs
-are included. This kind of reasoning is similar to life-cycle costing in structural engineering, but here the
-objects of interest are patients rather than bridges. The role of AI is to provide accurate risk estimates based
-on high-dimensional data, while mathematics glues together the probabilities, costs and time horizons into a
-coherent decision framework.
+If we only look at the purchase price, the cheapest option always wins. However, even a basic mathematical
+model that includes probabilities, expected costs and a time horizon of several years tells a different story. A
+cheap system that misses early cases produces hidden costs: extra treatments later, longer hospital stays and, in
+some cases, worse outcomes. A mid-range system that seems too expensive at first can actually minimise the
+cost per successful diagnosis once these future expenses are included. This kind of life-cycle style thinking is
+familiar in engineering, but here the “assets” are patients rather than structures.
 
-For future generations, a key challenge will be making these models understandable to the people who rely on
-them. Doctors and patients need explanations that connect mathematical quantities, such as prediction
-intervals or gradient norms, to everyday ideas of safety and fairness. At the same time, university students in
-engineering, mathematics and computer science will need some exposure to real medical problems so that they
-do not design algorithms in isolation from clinical reality. A model that looks elegant on paper, or even performs
-well on a narrow test set, can behave very differently when exposed to messy hospital data with missing values
-and measurement errors.
+This is where AI and mathematics genuinely work together. AI provides predictions about who is likely to have
+a particular condition; mathematics turns those predictions into decisions by combining them with costs, risks
+and limits on resources. Probability distributions help estimate uncertainty, optimisation can suggest good
+screening schedules, and relatively simple algebra is enough to compare strategies over time.
 
-Finally, there is an ethical dimension that simple equations cannot resolve on their own. AI-driven tools will
-almost certainly play a large role in the medicine of the future, from automated triage systems to personalised
-drug design. Mathematics can help to make their behaviour transparent and to set quantitative limits on error
-rates, but society still has to decide how responsibility is shared between algorithms and humans. Accepting
-that these systems will never be perfect, and allowing some room for human judgement and even a few
-inefficiencies, may actually be healthier than pretending that AI can provide a single optimal answer for every
-patient. This slightly untidy balance between rigorous mathematics and real-world constraints is likely to shape
-how future generations experience medical care.
+For future generations of students and doctors, the important skill will not just be using AI tools but questioning
+them. Real hospital data are messy, incomplete and sometimes biased. A basic understanding of statistics and
+modelling makes it easier to see when an apparently “smart” system is giving suspiciously confident answers or
+behaving strangely on new patients. AI is unlikely to replace human judgement, but it can support it, as long as
+both the mathematical reasoning and the limitations are understood honestly.
 </pre>
 </p>
 
+<p class="ex1">Table 1: Indicative annual cost and early-detection performance for different AI-supported screening strategies.</p>
+
 <table class="data-table">
 <tr>
-    <th>£ Cost of repairs</th>
-    <th>Lifespan of repairs (years)</th>
+    <th>AI screening strategy</th>
+    <th>Annual programme cost (£ million)</th>
+    <th>Early cases detected (%)</th>
 </tr>
-<tr><td>0.7 m</td><td>2</td></tr>
-<tr><td>3.3 m</td><td>4</td></tr>
-<tr><td>2.6 m</td><td>5</td></tr>
-<tr><td>17.4 m</td><td>7</td></tr>
-<tr><td>8.8 m</td><td>9</td></tr>
+<tr><td>Strategy A</td><td>0.7</td><td>55</td></tr>
+<tr><td>Strategy B</td><td>3.3</td><td>65</td></tr>
+<tr><td>Strategy C</td><td>2.6</td><td>70</td></tr>
+<tr><td>Strategy D</td><td>17.4</td><td>82</td></tr>
+<tr><td>Strategy E</td><td>8.8</td><td>90</td></tr>
 </table>
 
-<p class="ex1">Formatting some equations using MathML:</p>
+<p class="ex1">As a very simple reminder that AI systems are ultimately built on mathematical expressions and models,
+consider the following quadratic equation written in MathML:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
     <msup><mi>x</mi><mn>2</mn></msup>
     <mo>+</mo>
-    <mi>4</mi>
+    <mn>4</mn>
     <mo>&InvisibleTimes;</mo>
     <mi>x</mi>
     <mo>+</mo>
-    <mi>4</mi>
+    <mn>4</mn>
     <mo>=</mo>
-    <mi>0</mi>
+    <mn>0</mn>
 </mrow>
 </math>
 
