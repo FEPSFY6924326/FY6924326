@@ -90,7 +90,7 @@ learning approaches. Our results show that… conclude that.
 
 <h3 id="Introduction">Introduction</h3>
 <p class="ex1">
-<pre>
+<pre id="Introduction_InText">
 Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an intelligent 
 machine through the interaction of an oracle with the machine system, over a sequence of learning epochs. A 
 distinctive component in an active system is the querying strategy, used to sample candidate training instances 
@@ -103,9 +103,13 @@ training set, a revised model is subsequently induced.
 </p>
 
 <h3 id="Analysis">Analysis and discussion</h3>
-<p class="ex1">Bridge deck repair durability is the subject of much recent research such as in 
-<a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034">Toshihiko et al. (2023)</a>.
-Table 1: Data on cost and lifespan of bridge repairs.</p>
+<p class="ex1">
+<pre id="Analysis_InText">
+Bridge deck repair durability is the subject of much recent research such as in 
+Toshihiko et al. (2023).
+Table 1: Data on cost and lifespan of bridge repairs.
+</pre>
+</p>
 
 <table class="data-table">
 <tr>
@@ -150,6 +154,70 @@ Brunzzone, L and Persello, C (2009), Active learning for classification of remot
 Campbell, C, Cristianini N, and Smola, A (2000), Query learning with large margin classifiers.
 </pre>
 </p>
+
+<hr>
+
+<!-- ⭐ GITHUB TIMESTAMP + WORD COUNT DISPLAY -->
+<div id="lastModifiedDisplay" style="margin-top:20px; font-weight:bold;">
+    Last modified time will appear here.
+</div>
+
+<button id="verifyButton">Verify Last Modified Time</button>
+
+<p id="totalWordCount" style="margin-top:20px; font-weight:bold;">
+    Total word count will appear here.
+</p>
+
+<!-- ⭐ JAVASCRIPT FOR TIMESTAMP + WORD COUNT -->
+<script>
+// ---------- GITHUB LAST MODIFIED TIME ----------
+const githubUser = "FEPSFY6924326";
+const githubRepo = "FY6924326";
+const branch = "main"; // your repo uses main
+
+async function getLastUpdatedTime() {
+  try {
+    const url = `https://api.github.com/repos/${githubUser}/${githubRepo}/commits/${branch}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("GitHub API error");
+
+    const data = await res.json();
+    const isoDate = data.commit.author.date;
+    const d = new Date(isoDate);
+
+    document.getElementById("lastModifiedDisplay").textContent =
+      "Last Modified Time (from GitHub): " + d.toLocaleString();
+  } catch (e) {
+    document.getElementById("lastModifiedDisplay").textContent =
+      "Could not load GitHub last modified time.";
+  }
+}
+
+// ---------- WORD COUNT ----------
+function countWordsInElement(id) {
+  const el = document.getElementById(id);
+  if (!el) return 0;
+  const text = el.textContent || "";
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
+function updateTotalWordCount() {
+  const intro = countWordsInElement("Introduction_InText");
+  const analysis = countWordsInElement("Analysis_InText");
+  const total = intro + analysis;
+
+  document.getElementById("totalWordCount").textContent =
+    "Total word count (Introduction + Analysis): " + total;
+}
+
+// ---------- RUN WHEN PAGE LOADS ----------
+window.addEventListener("load", () => {
+  getLastUpdatedTime();
+  updateTotalWordCount();
+});
+
+document.getElementById("verifyButton").addEventListener("click", getLastUpdatedTime);
+</script>
 
 <footer>12 | Page</footer>
 
