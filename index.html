@@ -260,13 +260,13 @@ function displayTotalWordCount() {
         `Total word count: ${total}`;
 }
 
-// ✅ Run BOTH timestamp and word count when the page loads
+
 window.addEventListener('load', function () {
     getLastUpdatedTime();
     displayTotalWordCount();
 });
 
-// ✅ Button still works, just calls the same timestamp function again
+
 async function verifyLastUpdatedTime() {
     document.getElementById('last-updated').innerText = 'Verifying...';
     await getLastUpdatedTime();
