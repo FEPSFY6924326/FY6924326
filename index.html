@@ -213,10 +213,9 @@ Nature Medicine, 25, pp. 44–56.
 </pre>
 </p>
 
-
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- ////////////////////////////// Adding last update ////////////////////////////// -->
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
     <!-- Last commit time display -->
 <div id="last-updated">Loading last update time...</div>
 <!-- Verify Button -->
@@ -225,8 +224,8 @@ Nature Medicine, 25, pp. 44–56.
 </button>
 <script>
     async function getLastUpdatedTime() {
-        const username = 'SR02372';
-        const repo = 'FY6924326';
+        const username = 'nr0025';
+        const repo = 'FY0025';
        
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
         try {
@@ -265,8 +264,8 @@ Nature Medicine, 25, pp. 44–56.
 
 
  <!-- //////////////////////////////////////////////////////////////////////////////// -->
- <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
 <!-- Placeholder for total word count -->
 <p id="totalWordCount"></p>
 <hr>
@@ -294,4 +293,4 @@ Nature Medicine, 25, pp. 44–56.
   }
   // Run the function for specific sections and display total count when the page loads
   window.onload = displayTotalWordCount;
-</script>   
+</script>
